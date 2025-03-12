@@ -1,0 +1,1 @@
+Recomiendo leer primero los documentos acerca de los iterables en Python para comprender con más claridad la resolución de los ejercicios.
