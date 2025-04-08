@@ -175,13 +175,100 @@ print("\n")
 
 # Exercises: Level 3
 
-#     1. Convert the ages to a set and compare the length of the list and the set, which one is bigger?
+print("💻 Ejercicios: nivel 3\n")
+
+# 1. Convert the ages to a set and compare the length of the list and the set, which one is bigger?
+
+age_set = set(age)
+
+print(
+    f"1. ¿El conjunto de edades {age_set} tiene una cardinalidad mayor a la lista de edades {age}?\n"
+)
+print(f"Cardinalidad del conjunto: {len(age_set)}")
+print(f"Cardinalidad de la lista: {len(age)}\n")
+
+print(
+    "Esto es así porque los conjuntos no admiten elementos repetidos, situación que sí se puede dar en las listas.\n"
+)
+
+# 2. Explain the difference between the following data types: string, list, tuple and set
+
+print(
+    "2. ¡Atención! Al siguiente punto lo hice con DeepSeek porque no tenía muchas ganas de escribir.\n"
+)
+
+explicacion = """
+Diferencias entre String, List, Tuple y Set en Python:
+
+1. 🔤 String:
+   - Inmutable (no se puede modificar después de crear)
+   - Secuencia de caracteres
+   - Sintaxis: "hola" o 'mundo'
+   - Ejemplo: 'Python' → 'P','y','t','h','o','n'. Aclaración: Esta notación pretende demostrar que cada letra de la cadena tiene un índice. La 'P' tiene un índice de 0, y así sucesivamente con las demás letras.
+
+2. 📃 List:
+   - Mutable (se puede modificar)
+   - Ordenada y indexada
+   - Permite elementos duplicados
+   - Sintaxis: [1, 2, 3]
+   - Ejemplo: [10, "texto", True] → Puede tener distintos tipos
+
+3. 📦 Tuple:
+   - Inmutable (como una lista fija)
+   - Más rápida que las listas
+   - Sintaxis: (1, 2, 3)
+   - Ejemplo: (255, 0, 128) → Usado para datos constantes
+
+4. 🎯 Set:
+   - Mutable pero con elementos únicos (no duplicados)
+   - No ordenado ni indexado
+   - Sintaxis: {1, 2, 3}
+   - Ejemplo: {1, 2, 2, 3} → Se convierte en {1, 2, 3}
+
+🔑 Key Differences:
+   ┌──────────┬──────────┬──────────┬──────────┬──────────┐
+   │          │ Mutable  │ Ordenado │ Indexado │ Únicos   │
+   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+   │ String   │    ❌    │    ✅    │    ✅    │    ❌    │
+   │ List     │    ✅    │    ✅    │    ✅    │    ❌    │
+   │ Tuple    │    ❌    │    ✅    │    ✅    │    ❌    │
+   │ Set      │    ✅    │    ❌    │    ❌    │    ✅    │
+   └──────────┴──────────┴──────────┴──────────┴──────────┘
+"""
+
+print(explicacion)
+
+# 3. I am a teacher and I love to inspire and teach people. How many unique words have been used in the sentence? Use the split methods and set to get the unique words.
+
+print(
+    "3. Voy a sacar los puntos '.' de la oración para pracicar la comprensión de listas.\n"
+)
+
+oracion_str = "I am a teacher and I love to inspire and teach people."
+
+print(f"oracion_str: {oracion_str}\nTipo: {type(oracion_str)}\n")
+
+oracion_list = list(oracion_str)
+
+print(f"oracion_list: {oracion_list}\nTipo: {type(oracion_list)}\n")
+
+oracion_list_filtrada = [char for char in oracion_list if char != "."]
+
+print(
+    f"oracion_list_filtrada: {oracion_list_filtrada}\nTipo: {type(oracion_list_filtrada)}\n"
+)
+
+oracion_str_filtrada = "".join(oracion_list_filtrada)
+
+print(
+    f"oracion_str_filtrada reconstruida: {oracion_str_filtrada}\nTipo: {type(oracion_str_filtrada)}\n"
+)
+
+unique_words = set(oracion_str_filtrada.split())
+
+print(
+    f'''3. El número de palabras únicas utilizadas en la oración "{oracion_str_filtrada}" es de {len(unique_words)}.\n'''
+)
 
 
-#     2. Explain the difference between the following data types: string, list, tuple and set
-
-
-#     3. I am a teacher and I love to inspire and teach people. How many unique words have been used in the sentence? Use the split methods and set to get the unique words.
-
-
-# 🎉 CONGRATULATIONS ! 🎉
+print("🎉 CONGRATULATIONS ! 🎉\n")
