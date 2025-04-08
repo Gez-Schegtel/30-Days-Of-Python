@@ -1,5 +1,7 @@
 # 💻 Exercises: Day 7
 
+print("💻 Ejercicios: nivel 1\n")
+
 it_companies = {"Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"}
 A = {19, 22, 24, 20, 25, 26}
 B = {19, 22, 20, 25, 26, 24, 28, 27}
@@ -93,26 +95,83 @@ print(
 
 # Exercises: Level 2
 
+print("💻 Ejercicios: nivel 2\n")
+
+print("Utilizaremos los siguientes conjuntos...\n")
+print(f"Conjunto A: {A}")
+print(f"Conjunto B: {B}\n")
+
 # 1. Join A and B
 
+print(
+    "1. Para hacer una unión entre dos conjuntos se puede utilizar el método 'union()' o el operador '|':\n"
+)
+
+print(f"A.union(B) >> {A.union(B)}")
+print(f"A | B >> {A | B}\n")
 
 # 2. Find A intersection B
 
+print(
+    "2. Para la intersección se puede utilizar el método 'intersec()' o el operador '&'.\n"
+)
+
+print(f"A.intersection(B) >> {A.intersection(B)}")
+print(f"A & B >> {A & B}\n")
 
 # 3. Is A subset of B
 
+print(
+    "3. Podemos usar el operador '<=' o el método 'issubset()' para ver si un conjunto es un subconjunto de otro.\n"
+)
+
+print(f"¿Es A un subconjunto de B? A.issubset(B) >> {A.issubset(B)}")
+print(f"¿Es A un subconjunto de B? A <= B >> {A <= B}\n")
 
 # 4. Are A and B disjoint sets
 
+print(
+    "4. Para ver si dos conjuntos son disjuntos (o sea, si no tienen ningún elemento en común) no nos queda más que utilizar el método 'isdisjoint()'\n"
+)
+
+print(f"¿Son A y B conjuntos disjuntos? >> {A.isdisjoint(B)}\n")
 
 # 5. Join A with B and B with A
 
+print("5. La unión es conmutativa, por lo que da igual si unís A con B, o B con A.\n")
+
+print(f"A.union(B) >> {A.union(B)}")
+print(f"B.union(A) >> {B.union(A)}\n")
 
 # 6. What is the symmetric difference between A and B
 
+print(
+    "6. Recordar que la diferencia simétrica de dos conjuntos es el conjunto que contiene todos los elementos que no tienen en común dichos conjuntos.\nEn Python lo podemos encontrar con el método 'symmetric_difference()' o el operador '^'.\n"
+)
+
+print(f"A.symmetric_difference(B) >> {A.symmetric_difference(B)}")
+print(f"A ^ B >> {A ^ B}\n")
 
 # 7. Delete the sets completely
 
+print(
+    "7. Podemos usar 'clear()' para eliminar todos los elementos de un conjunto. Para borrarlo definitivamente hay que usar el método 'del'."
+)
+
+A.clear()
+
+print(f"El conjunto A después de haber hecho 'A.clear()' >> {A}")
+
+del B
+
+try:
+    print(f"El conjunto B luego de haber hecho 'del B' >> {B}")
+except Exception:
+    print(
+        "No se puede mostrar el conjunto B, pues luego de haber hecho 'del B' éste ya no existe más."
+    )
+
+print("\n")
 
 # Exercises: Level 3
 
