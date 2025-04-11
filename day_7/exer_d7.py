@@ -264,7 +264,17 @@ print(
     f"oracion_str_filtrada reconstruida: {oracion_str_filtrada}\nTipo: {type(oracion_str_filtrada)}\n"
 )
 
-unique_words = set(oracion_str_filtrada.split())
+oracion_str_filtrada_split = oracion_str_filtrada.split()
+
+print(
+    f"oracion_str_filtrada_split: {oracion_str_filtrada_split}\nTipo: {type(oracion_str_filtrada_split)}\n"
+)
+
+print(
+    "Ahora, vamos a convertir esta lista en un conjunto para poder contar las palabras únicas. Para ello, utilizamos el método 'set()'.\n"
+)
+
+unique_words = set(oracion_str_filtrada_split)
 
 print(
     f'''3. El número de palabras únicas utilizadas en la oración "{oracion_str_filtrada}" es de {len(unique_words)}.\n'''
