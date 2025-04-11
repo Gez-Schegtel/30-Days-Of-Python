@@ -270,5 +270,4 @@ print(
     f'''3. El número de palabras únicas utilizadas en la oración "{oracion_str_filtrada}" es de {len(unique_words)}.\n'''
 )
 
-
 print("🎉 CONGRATULATIONS ! 🎉\n")
