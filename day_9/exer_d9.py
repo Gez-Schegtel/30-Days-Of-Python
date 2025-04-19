@@ -97,15 +97,67 @@ print("Exercises: Level 2\n")
 #       50-59, D
 #       0-49, F
 
+score = int(input("1. Enter your score: "))
+
+while score not in range(0, 101):
+    score = int(
+        input("Enter your scores again. It has to be a value between 0 and 100: ")
+    )
+print("\n")
+
+if score in range(0, 50):
+    print("Your grade is: F")
+elif score in range(50, 60):
+    print("Your grade is: D")
+elif score in range(60, 70):
+    print("Your grade is: C")
+elif score in range(70, 90):
+    print("Your grade is: B")
+elif score in range(90, 101):
+    print("Your grade is: A")
+
+print("\n")
 
 # 2. Check if the season is Autumn, Winter, Spring or Summer. If the user input is: September, October or November, the season is Autumn. December, January or February, the season is Winter. March, April or May, the season is Spring June, July or August, the season is Summer
+## Versión con listas.
+autumn = ["september", "october", "november"]
+winter = ["december", "january", "february"]
+spring = ["march", "april", "may"]
+summer = ["june", "july", "august"]
 
+month_by_user = input("2. Enter the actual month of the year: ").lower()
+print("\n")
+
+if month_by_user in autumn:
+    print("The season is autumn!")
+elif month_by_user in winter:
+    print("The season is winter!")
+elif month_by_user in spring:
+    print("The season is spring!")
+elif month_by_user in summer:
+    print("The season is summer!")
+else:
+    print("Invalid input.")
+
+print("\n")
 
 # 3. The following list contains some fruits:
 
 #       fruits = ['banana', 'orange', 'mango', 'lemon']
 #       If a fruit doesn't exist in the list add the fruit to the list and print the modified list. If the fruit exists print('That fruit already exist in the list')
 
+fruits = ["banana", "orange", "mango", "lemon"]
+
+fruit_by_user = input("3. Enter a fruit: ").lower()
+print("\n")
+
+if fruit_by_user not in fruits:
+    fruits.append(fruit_by_user)
+    print(f"We added the fruit you suggested into our list: {fruits}")
+else:
+    print("That fruit already exist in the list.")
+
+print("\n")
 
 print("Exercises: Level 3\n")
 
