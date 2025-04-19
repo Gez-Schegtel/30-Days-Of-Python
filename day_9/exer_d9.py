@@ -125,7 +125,7 @@ winter = ["december", "january", "february"]
 spring = ["march", "april", "may"]
 summer = ["june", "july", "august"]
 
-month_by_user = input("2. Enter the actual month of the year: ").lower()
+month_by_user = input("2. Enter the actual month of the year: ").lower().strip()
 print("\n")
 
 if month_by_user in autumn:
@@ -141,6 +141,23 @@ else:
 
 print("\n")
 
+## Versión con diccionario.
+seasons = {
+    **dict.fromkeys(["september", "october", "november"], "Autumn"),
+    **dict.fromkeys(["december", "january", "february"], "Winter"),
+    **dict.fromkeys(["march", "april", "may"], "Spring"),
+    **dict.fromkeys(["june", "july", "august"], "Summer"),
+}
+
+season = seasons.get(month_by_user)
+
+if season:
+    print(f"The season is {season}!")
+else:
+    print("Invalid input.")
+
+print("\n")
+
 # 3. The following list contains some fruits:
 
 #       fruits = ['banana', 'orange', 'mango', 'lemon']
@@ -148,7 +165,7 @@ print("\n")
 
 fruits = ["banana", "orange", "mango", "lemon"]
 
-fruit_by_user = input("3. Enter a fruit: ").lower()
+fruit_by_user = input("3. Enter a fruit: ").lower().strip()
 print("\n")
 
 if fruit_by_user not in fruits:
