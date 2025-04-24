@@ -180,24 +180,48 @@ print("Exercises: Level 3\n")
 
 # 1. Here we have a person dictionary. Feel free to modify it!
 
-#       person={
-#           'first_name': 'Asabeneh',
-#           'last_name': 'Yetayeh',
-#           'age': 250,
-#           'country': 'Finland',
-#           'is_marred': True,
-#           'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
-#           'address': {
-#               'street': 'Space street',
-#               'zipcode': '02210'
-#           }
-#           }
+person = {
+    "first_name": "Asabeneh",
+    "last_name": "Yetayeh",
+    "age": 250,
+    "country": "Finland",
+    "is_marred": True,
+    "skills": ["JavaScript", "React", "Node", "MongoDB", "Python"],
+    "address": {"street": "Space street", "zipcode": "02210"},
+}
 
-#        * Check if the person dictionary has skills key, if so print out the middle skill in the skills list.
-#        * Check if the person dictionary has skills key, if so check if the person has 'Python' skill and print out the result.
-#        * If a person skills has only JavaScript and React, print('He is a front end developer'), if the person skills has Node, Python, MongoDB, print('He is a backend developer'), if the person skills has React, Node and MongoDB, Print('He is a fullstack developer'), else print('unknown title') - for more accurate results more conditions can be nested!
-#        * If the person is married and if he lives in Finland, print the information in the following format:
+# * Check if the person dictionary has skills key, if so print out the middle skill in the skills list.
+# * Check if the person dictionary has skills key, if so check if the person has 'Python' skill and print out the result.
+# * If a person skills has only JavaScript and React, print('He is a front end developer'), if the person skills has Node, Python, MongoDB, print('He is a backend developer'), if the person skills has React, Node and MongoDB, Print('He is a fullstack developer'), else print('unknown title') - for more accurate results more conditions can be nested!
+# * If the person is married and if he lives in Finland, print the information in the following format:
 #
-#           Asabeneh Yetayeh lives in Finland. He is married.
+# Asabeneh Yetayeh lives in Finland. He is married.
+
+
+def middle_in_a_list(number_of_ex, listy):
+    dicty_len = len(listy)
+
+    if dicty_len % 2 != 0:
+        middle_item = [listy[dicty_len // 2]]
+        print(
+            f"{number_of_ex}. La habilidad que está en el medio de la lista es: {middle_item}"
+        )
+    else:
+        middle_item = [listy[dicty_len // 2 - 1], listy[dicty_len // 2]]
+        print(
+            f"{number_of_ex}. Las habilidades que están en el medio de la lista son: {middle_item}"
+        )
+
+
+skills = person.get("skills")
+
+if skills:
+    middle_in_a_list(1, skills)
+    if "PYTHON" in skills.upper():
+        print("La persona tiene habilidades en Python.")
+else:
+    print("La clave buscada no se encuentra en la lista.")
+
+print()
 
 print("🎉 CONGRATULATIONS ! 🎉\n")
