@@ -185,7 +185,7 @@ person = {
     "last_name": "Yetayeh",
     "age": 250,
     "country": "Finland",
-    "is_marred": True,
+    "is_married": True,
     "skills": ["JavaScript", "React", "Node", "MongoDB", "Python"],
     "address": {"street": "Space street", "zipcode": "02210"},
 }
@@ -199,17 +199,46 @@ person = {
 
 
 def middle_in_a_list(number_of_ex, listy):
-    dicty_len = len(listy)
+    listy_len = len(listy)
 
-    if dicty_len % 2 != 0:
-        middle_item = [listy[dicty_len // 2]]
+    if listy_len % 2 != 0:
+        middle_item = [listy[listy_len // 2]]
         print(
             f"{number_of_ex}. La habilidad que está en el medio de la lista es: {middle_item}"
         )
     else:
-        middle_item = [listy[dicty_len // 2 - 1], listy[dicty_len // 2]]
+        middle_item = [listy[listy_len // 2 - 1], listy[listy_len // 2]]
         print(
             f"{number_of_ex}. Las habilidades que están en el medio de la lista son: {middle_item}"
+        )
+
+
+def python_skills_checker(number_of_ex, listy):
+    listy = [word.upper() for word in listy]  ## List comprehension
+    if "PYTHON" in listy:
+        print(f"{number_of_ex}. La persona tiene habilidades en Python.")
+
+
+def checking_developer_type(number_of_ex, listy):
+    setsy = {word.upper() for word in listy}  ## Set comprehension
+
+    if {"REACT", "NODE", "MONGODB"}.issubset(setsy):
+        print(f"{number_of_ex}. He is a fullstack developer.")
+    elif {"PYTHON", "NODE", "MONGODB"}.issubset(setsy):
+        print(f"{number_of_ex}. He is a backend developer.")
+    elif {"JAVASCRIPT", "REACT"}.issubset(setsy):
+        print(f"{number_of_ex}. He is a frontend developer.")
+    else:
+        print(f"{number_of_ex}. Superunknown title.")
+
+
+def checking_civil_state(number_of_ex, dicty):
+    married = dicty.get("is_married")
+    country = dicty.get("country")
+
+    if married and country.upper() == "FINLAND":
+        print(
+            f"{number_of_ex}. {dicty.get('first_name')} {dicty.get('last_name')} is married and lives in Finland."
         )
 
 
@@ -217,10 +246,13 @@ skills = person.get("skills")
 
 if skills:
     middle_in_a_list(1, skills)
-    if "PYTHON" in skills.upper():
-        print("La persona tiene habilidades en Python.")
+    python_skills_checker(2, skills)
+    checking_developer_type(3, skills)
 else:
-    print("La clave buscada no se encuentra en la lista.")
+    print("""La clave "skills" buscada no se encuentra en la lista.""")
+
+
+checking_civil_state(4, person)
 
 print()
 
