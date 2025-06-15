@@ -24,7 +24,7 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@2500896589ef8f7247069a56136f8dc177c27ccf
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: https://sonarcloud.io
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
           SONAR_SCANNER_OPTS: >
             -Dsonar.projectKey=Gez-Schegtel_30-Days-Of-Python
             -Dsonar.organization=gez-schegtel-gh

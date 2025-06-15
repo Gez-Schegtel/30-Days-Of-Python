@@ -1,0 +1,17 @@
+
+name: "CodeQL config for solutions with smells"
+
+paths:
+  - solutions
+
+disable-default-queries: false
+
+packs:
+  - codeql/python-queries
+  - codeql/python-queries:codeql-suites/python-security-and-quality.qls
+
+# Opcional: podés usar esto para filtrar resultados si querés menos ruido
+# query-filters:
+#   - exclude:
+#       problems.severity:
+#         - note
