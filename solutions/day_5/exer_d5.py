@@ -188,7 +188,7 @@ del it_companies
 
 try:
     print(f"25. Lista 'it_companies': {it_companies}")
-except:
+except NameError:
     print("25. La lista 'it_companies' se borró por completo.")
 
 print("\n")
