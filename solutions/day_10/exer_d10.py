@@ -1,68 +1,50 @@
+# 💻 Exercises: Day 10
 
-💻 Exercises: Day 10
-Exercises: Level 1
+from lev1 import d10_level1
+from lev2 import d10_level2
+from lev3 import d10_level3
 
-Iterate 0 to 10 using for loop, do the same using while loop.
+VALID_OPTIONS = ("0", "1", "2", "3")
 
-Iterate 10 to 0 using for loop, do the same using while loop.
 
-Write a loop that makes seven calls to print(), so we get on the output the following triangle:
+def show_menu() -> None:
+    print("\n🎓 Menú De Ejercicios")
+    print("1 - Nivel 1")
+    print("2 - Nivel 2")
+    print("3 - Nivel 3")
+    print("0 - Salir")
 
-  #
-  ##
-  ###
-  ####
-  #####
-  ######
-  #######
 
-Use nested loops to create the following:
+def option_selection() -> str:
+    show_menu()
 
-# # # # # # # #
-# # # # # # # #
-# # # # # # # #
-# # # # # # # #
-# # # # # # # #
-# # # # # # # #
-# # # # # # # #
-# # # # # # # #
+    while True:
+        user_option = input(">> ")
 
-Print the following pattern:
+        if user_option in VALID_OPTIONS:
+            break
 
-0 x 0 = 0
-1 x 1 = 1
-2 x 2 = 4
-3 x 3 = 9
-4 x 4 = 16
-5 x 5 = 25
-6 x 6 = 36
-7 x 7 = 49
-8 x 8 = 64
-9 x 9 = 81
-10 x 10 = 100
+        print(f"¡Error! Las opciones correctas son: {'/'.join(VALID_OPTIONS)}\n")
 
-    Iterate through the list, ['Python', 'Numpy','Pandas','Django', 'Flask'] using a for loop and print out the items.
+    return user_option
 
-    Use for loop to iterate from 0 to 100 and print only even numbers
 
-    Use for loop to iterate from 0 to 100 and print only odd numbers
+def main():
+    while True:
+        selected_option = option_selection()
 
-Exercises: Level 2
+        match selected_option:
+            case "1":
+                d10_level1()
+            case "2":
+                d10_level2()
+            case "3":
+                d10_level3()
+            case "0":
+                print("\n👋 ¡Hasta luego!\n")
+                break
 
-    Use for loop to iterate from 0 to 100 and print the sum of all numbers.
 
-The sum of all numbers is 5050.
-
-Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
-
-The sum of all evens is 2550. And the sum of all odds is 2500.
-
-Exercises: Level 3
-
-    Go to the data folder and use the countries.py file. Loop through the countries and extract all the countries containing the word land.
-    This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
-    Go to the data folder and use the countries_data.py file.
-        What are the total number of languages in the data
-        Find the ten most spoken languages from the data
-        Find the 10 most populated countries in the world
+if __name__ == "__main__":
+    main()
 
