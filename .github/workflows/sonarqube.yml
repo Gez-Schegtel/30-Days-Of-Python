@@ -1,21 +1,34 @@
 name: sonarqube-check
+
 on:
   push:
     branches:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
+
 jobs:
   sonarqube:
     name: SonarQube
     runs-on: ubuntu-latest
     permissions:
       contents: read
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0
+
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@2500896589ef8f7247069a56136f8dc177c27ccf
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: https://sonarcloud.io
+          SONAR_SCANNER_OPTS: >
+            -Dsonar.projectKey=Gez-Schegtel_30-Days-Of-Python
+            -Dsonar.organization=gez-schegtel-gh
+            -Dsonar.projectName=30-Days-Of-Python
+            -Dsonar.projectVersion=1.0
+            -Dsonar.sources=solutions
+            -Dsonar.language=py
