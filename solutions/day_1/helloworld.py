@@ -62,6 +62,6 @@ import math
 
 first_point = (2, 3)
 second_point = (10, 8)
-euclidian_distance = math.sqrt((second_point[0] - first_point[0])**2 + (second_point[1] - first_point[1])**2)
+euclidian_distance = math.hypot(second_point[0] - first_point[0], second_point[1] - first_point[1])
 
 print(f"The Euclidian Distance between the point {first_point} and {second_point} is {euclidian_distance:.2f}")
