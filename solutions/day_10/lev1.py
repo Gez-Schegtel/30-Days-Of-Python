@@ -107,8 +107,7 @@ def d10_level1():
 
     for element in ["Python", "Numpy", "Pandas", "Django", "Flask"]:
         print(element)
-    else:
-        print("\nEsos fueron todos los elementos de la lista.\n")
+    print("\nEsos fueron todos los elementos de la lista.\n")
 
     print()
 
