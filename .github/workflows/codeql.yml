@@ -13,9 +13,10 @@ name: "CodeQL - Analyze Python Solutions + Smells"
 
 on:
   push:
-    branches: [ "main", "branch_rules" ]
+    branches: [ main, "feature/**" ]
   pull_request:
-    branches: [ "main", "branch_rules" ]
+    branches: [ main, "feature/**" ]
+    types: [opened, synchronize, reopened]
     paths-ignore:
       - '**/*.md'
   schedule:
