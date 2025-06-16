@@ -1,5 +1,5 @@
 def d10_level3():
-    print("\nEstos son los ejercicios del día 10, nivel 3.")
+    print("\nEstos son los ejercicios del día 10, nivel 3.\n")
 
     # ==============================
     #       Exercises: Level 3

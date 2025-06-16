@@ -1,5 +1,5 @@
 def d10_level1():
-    print("\nEstos son los ejercicios del día 10, nivel 1.")
+    print("\nEstos son los ejercicios del día 10, nivel 1.\n")
 
     # ==============================
     #       Exercises: Level 1
@@ -99,11 +99,74 @@ def d10_level1():
     for i in range(11):
         print(f"{i} × {i} = {i * i}")
 
+    print()
+
     # 6. Iterate through the list ['Python', 'Numpy','Pandas','Django', 'Flask'] using a for loop and print each item.
+
+    print("Punto 6: ")
+
+    for element in ["Python", "Numpy", "Pandas", "Django", "Flask"]:
+        print(element)
+    else:
+        print("\nEsos fueron todos los elementos de la lista.\n")
+
+    print()
 
     # 7. Use a for loop to iterate from 0 to 100 and print only even numbers.
 
+    print("Punto 7:")
+
+    print("Versión 1:")
+
+    for number in range(0, 101, 2):
+        print(f"{number} ", end=" ")
+
+    print("\n\nVersión 2:")
+
+    for number in range(0, 101):
+        if number % 2 != 0:
+            continue
+
+        print(f"{number} ", end=" ")
+
+    print("\n\nVersión 3:")
+
+    even_numbers = list()
+
+    for number in range(101):
+        if number % 2 == 0:
+            even_numbers.append(number)
+
+    print("  ".join(map(str, even_numbers)))
+
+    print()
+
     # 8. Use a for loop to iterate from 0 to 100 and print only odd numbers.
+
+    print("Punto 8:")
+
+    print("Versión 1:")
+
+    for number in range(1, 100, 2):
+        print(f"{number} ", end=" ")
+
+    print("\n\nVersión 2:")
+
+    for number in range(0, 100):
+        if number % 2 == 0:
+            continue
+
+        print(f"{number} ", end=" ")
+
+    print("\n\nVersión 3:")
+
+    odd_numbers = list()
+
+    for number in range(101):
+        if number % 2 == 1:
+            odd_numbers.append(number)
+
+    print("  ".join(map(str, odd_numbers)))
 
 
 if __name__ == "__main__":
