@@ -34,7 +34,7 @@ def d10_level2():
             acuml_odds += number
 
     print(f"La suma de todos los números pares es: {acuml_evens}")
-    print(f"La suma de todos los números impares es: {acuml_odds}\n")
+    print(f"La suma de todos los números impares es: {acuml_odds}")
 
 
 if __name__ == "__main__":
