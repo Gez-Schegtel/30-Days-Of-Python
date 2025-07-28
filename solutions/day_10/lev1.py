@@ -169,5 +169,4 @@ def d10_level1():
 
 
 if __name__ == "__main__":
-    # Este condicional simple va acá para ejecutar este archivo de código fuente de forma específica si así se lo requiere.
     d10_level1()
