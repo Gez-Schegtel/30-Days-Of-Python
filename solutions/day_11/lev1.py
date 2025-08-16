@@ -381,6 +381,28 @@ def d11_level1():
 
     print(sum_of_even_with_sum(10))
 
+    def sum_of_even_comprehension(the_number):
+        even_list = [number for number in range(the_number + 1) if number % 2 == 0]
+        return sum(even_list)
+
+    print(sum_of_even_comprehension(10))
+
+    def sum_of_even_filter(the_number):
+        the_list = list(range(the_number + 1))
+        even_list = list(filter(lambda number: number % 2 == 0, the_list))
+        return sum(even_list)
+
+    print(sum_of_even_filter(10))
+
+    def sum_of_even_traditional(the_number):
+        total = 0
+        for number in range(0, the_number + 1, 2):
+            total = total + number
+
+        return total
+
+    print(sum_of_even_traditional(10))
+
 
 if __name__ == "__main__":
     d11_level1()
