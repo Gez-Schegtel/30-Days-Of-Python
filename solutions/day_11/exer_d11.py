@@ -35,11 +35,11 @@ def main():
 
         match selected_option:
             case "1":
-                d10_level1()
+                d11_level1()
             case "2":
-                d10_level2()
+                d11_level2()
             case "3":
-                d10_level3()
+                d11_level3()
             case "0":
                 print("\n¡Hasta luego!\n")
                 break
