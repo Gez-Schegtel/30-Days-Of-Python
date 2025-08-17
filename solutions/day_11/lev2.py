@@ -80,7 +80,7 @@ def d11_level2():
             return sorted_list[list_length // 2]
 
     print(
-        f"La media de la lista {sorted(my_list)} es {calculate_median_traditional(my_list)}."
+        f"La mediana de la lista {sorted(my_list)} es {calculate_median_traditional(my_list)}."
     )
 
     from statistics import median
@@ -88,7 +88,7 @@ def d11_level2():
     def calculate_median(the_list):
         return median(the_list)
 
-    print(f"La media de la lista {sorted(my_list)} es {calculate_median(my_list)}.")
+    print(f"La mediana de la lista {sorted(my_list)} es {calculate_median(my_list)}.")
 
     from statistics import mode
 
